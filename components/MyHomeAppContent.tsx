@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 
 export const MyHomeAppContent = () => {
   return (
@@ -8,7 +8,17 @@ export const MyHomeAppContent = () => {
         horizontal={false}
         style={contentStyles.innerContainerView}
       >
-        <Text style={contentStyles.welcomeText}>Welcome to My Home App</Text>
+        <Text style={contentStyles.welcomeText}>
+          Welcome to{" "}
+          <Image
+            style={contentStyles.logo}
+            resizeMode="cover"
+            accessible={true}
+            accessibilityLabel={"Logo"}
+            source={require("./../assets/images/gharbeti.png")}
+          />
+          My Home App
+        </Text>
         <Text style={contentStyles.contentText}>
           This is the app for the make the convinet for owner and roomies. This
           is the app for the make the convinet for owner and roomies Lorem ipsum
@@ -35,12 +45,19 @@ const contentStyles = StyleSheet.create({
     textAlign: "center",
     padding: 20,
     color: "#262a2a",
+    alignItems:"center",
+    fontWeight:"bold"
   },
   contentText: {
     color: "#262a2a",
     justifyContent: "center",
     alignItems: "center",
     textAlign: "center",
-    fontSize: 30,
+    fontSize: 15,
   },
+  logo: {
+    width: 350,
+    height: 80,
+ 
+    marginHorizontal:-7  },
 });

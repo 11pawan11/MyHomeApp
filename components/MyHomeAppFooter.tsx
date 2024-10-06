@@ -4,7 +4,7 @@ export default function MyHomeAppFooter() {
   return (
     <View style={footerStyles.containerFooter}>
       <Text style={footerStyles.innerFooterText}>
-        Copyright to @2024 My Home
+        All Right Reserved, Copyright to @2024 My Home
       </Text>
     </View>
   );
@@ -12,7 +12,7 @@ export default function MyHomeAppFooter() {
 
 //styling fo teh footer
 const footerStyles = StyleSheet.create({
-  containerFooter: { backgroundColor: "red" },
+  containerFooter: { backgroundColor: "#484847" },
   innerFooterText: {
     fontWeight: "semibold",
     padding: 5,
